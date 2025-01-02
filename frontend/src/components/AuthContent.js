@@ -12,7 +12,7 @@ export default class AuthContent extends React.Component {
 
     componentDidMount() {
         request('get', '/messages', {}).then((response) => {
-            console.log(response.data); // Отладка
+            console.log(response.data);
             this.setState({ data: response.data });
         }).catch((error) => {
             console.error("API error:", error);
@@ -25,7 +25,7 @@ export default class AuthContent extends React.Component {
                 <div className='col-4'>
                     <div className='card' style={{ width: '18rem' }}>
                         <div className='card-body'>
-                            <h5 className='card-title'> Bachend response</h5>
+                            <h5 className='card-title'> Backend response</h5>
                             <p className='card-text'>Content:</p>
                             <ul className='content'>
                                 {Array.isArray(this.state.data) && this.state.data.map((line, index) => (
@@ -35,7 +35,7 @@ export default class AuthContent extends React.Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>           
         );
     }
 }
