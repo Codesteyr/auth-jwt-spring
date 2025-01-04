@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 public class SecurityConfig {
 
     private final UserAuthenticationEntryPoint userAuthenticationEntryPoint;
-    private final UserAuthProvider userAuthProvider;
+    private final UserAuthenticationProvider userAuthProvider;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
